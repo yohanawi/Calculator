@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Hooks
         previousCalculation = findViewById(R.id.previous_View);
         display = findViewById(R.id.display_EditText);
 
@@ -39,8 +40,7 @@ public class MainActivity extends AppCompatActivity {
     public void ClearBTNPush(View view){
         display.setText("");
         previousCalculation.setText("");
-    }
-
+    }//all clear button
     public void backspaceBTNPush(View view){
         int cursorPos = display.getSelectionStart();
         int textLen = display.getText().length();
@@ -51,27 +51,22 @@ public class MainActivity extends AppCompatActivity {
             display.setText(selection);
             display.setSelection(cursorPos-1);
         }
-    }
-
+    }//backspace button
     public void percentageBTNPush(View view){
         updateText(getResources().getString(R.string.percentage));
-    }
+    }//percentage button call
     public void multiplyBTNPush(View view){
         updateText(getResources().getString(R.string.multiplyText));
-    }
-
+    }//multiply button call
     public void divideBTNPush(View view){
         updateText(getResources().getString(R.string.divideText));
-    }
-
+    }//divide button call
     public void subtractBTNPush(View view){
         updateText(getResources().getString(R.string.subtractText));
-    }
-
+    }//subtract button call
     public void addBTNPush(View view){
         updateText(getResources().getString(R.string.addText));
-    }
-
+    }//add button call
     public void equalBTNPush(View view){
         String userExp = display.getText().toString();
 
@@ -85,48 +80,40 @@ public class MainActivity extends AppCompatActivity {
 
         display.setText(result);
         display.setSelection(result.length());
-    }
+    }//equal button call
+
     public void zeroBTNPush(View view){
         updateText(getResources().getString(R.string.zeroText));
-    }
-
+    }//zero button call
     public void oneBTNPush(View view){
         updateText(getResources().getString(R.string.oneText));
-    }
-
+    }//one button call
     public void twoBTNPush(View view){
         updateText(getResources().getString(R.string.twoText));
-    }
-
+    }//two button call
     public void threeBTNPush(View view){
         updateText(getResources().getString(R.string.threeText));
-    }
-
+    }//there button call
     public void fourBTNPush(View view){
         updateText(getResources().getString(R.string.fourText));
-    }
-
+    }//four button call
     public void fiveBTNPush(View view){
         updateText(getResources().getString(R.string.fiveText));
-    }
-
+    }//five button call
     public void sixBTNPush(View view){
         updateText(getResources().getString(R.string.sixText));
-    }
-
+    }//six button call
     public void sevenBTNPush(View view){
         updateText(getResources().getString(R.string.sevenText));
-    }
-
+    }//seven button call
     public void eightBTNPush(View view){
         updateText(getResources().getString(R.string.eightText));
-    }
-
+    }//eight button call
     public void nineBTNPush(View view){
         updateText(getResources().getString(R.string.nineText));
-    }
+    }//nine button call
     public void decimalBTNPush(View view){
         updateText(getResources().getString(R.string.decimalText));
-    }
+    }//decimal button call
 
 }
